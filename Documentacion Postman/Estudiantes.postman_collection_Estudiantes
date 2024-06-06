@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "1608fdee-d6cb-4df1-996a-bb591a8848fd",
+		"name": "Estudiantes",
+		"description": "Esta coleccion contiene la lista de los estudiantes, los detalles de cada estudiante, crear un nuevo estudiante y el actualizar cada estudiante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35327886",
+		"_collection_link": "https://www.postman.com/anthonymunozaguirre/workspace/gestioncolegio/collection/35327886-1608fdee-d6cb-4df1-996a-bb591a8848fd?action=share&source=collection_link&creator=35327886"
+	},
+	"item": [
+		{
+			"name": "Listar Estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5164/api/StudentsRead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"StudentsRead"
+					]
+				},
+				"description": "Esta url me genera la lista de todos los estudiantes"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalle Estudiante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5164/api/StudentsRead/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"StudentsRead",
+						"1"
+					]
+				},
+				"description": "Esta url me genera el detalle de cada estudiante"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5164/api/StudentsCreate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"StudentsCreate"
+					]
+				},
+				"description": "Esta url me genera me crea un nuevo estudiante"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5164/api/StudentsUpdate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"StudentsUpdate",
+						"1"
+					]
+				},
+				"description": "Esta url me edita un estudiante existente"
+			},
+			"response": []
+		}
+	]
+}

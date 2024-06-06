@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "f102b61b-2813-4054-a433-4ba99dc5e48b",
+		"name": "Cursos",
+		"description": "Esta coleccion contiene la lista de cursos, los detalles de cada curso, el crear de cada curso y el actualizar de cada curso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35327886",
+		"_collection_link": "https://www.postman.com/anthonymunozaguirre/workspace/gestioncolegio/collection/35327886-f102b61b-2813-4054-a433-4ba99dc5e48b?action=share&source=collection_link&creator=35327886"
+	},
+	"item": [
+		{
+			"name": "Listar Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5164/api/CoursesRead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"CoursesRead"
+					]
+				},
+				"description": "Esta url me genera la lista de todos los cursos"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalle Curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5164/api/CoursesRead/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"CoursesRead",
+						"1"
+					]
+				},
+				"description": "Esta url me genera el detalle de cada curso"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Matematicas II\",\r\n    \"description\": \"Curso de matematicas nivel basico\",\r\n    \"teacherId\": 1,\r\n    \"schedule\": \"Lunes y Miercoles 8:00-10:00\",\r\n    \"duration\": \"3 meses\",\r\n    \"capacity\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5164/api/CoursesCreate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"CoursesCreate"
+					]
+				},
+				"description": "Esta url me genera me crea un nuevo curso"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Curso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Matematicas III\",\r\n    \"description\": \"Curso de matematicas nivel basico\",\r\n    \"teacherId\": 1,\r\n    \"schedule\": \"Lunes y Miercoles 8:00-10:00\",\r\n    \"duration\": \"3 meses\",\r\n    \"capacity\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5164/api/CoursesUpdate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5164",
+					"path": [
+						"api",
+						"CoursesUpdate",
+						"1"
+					]
+				},
+				"description": "Esta url me edita un curso existente"
+			},
+			"response": []
+		}
+	]
+}
